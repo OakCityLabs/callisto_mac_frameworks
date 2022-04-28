@@ -19,8 +19,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Python",
-            url: "https://callisto-xcframeworks.s3.amazonaws.com/mac/0.1.7/Python.xcframework.zip",
-            checksum: "8479a3320269e32f014382a963e06fb0428bde827d4120bcb1dd2f44dfaa9e3c"
+            url: "https://callisto-xcframeworks.s3.amazonaws.com/mac/0.1.8/Python.xcframework.zip",
+            checksum: "e759415ae63b66026397f075a47e68790cb92f7cb604a34b841772a38555acaf"
         )
         
     ]
