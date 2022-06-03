@@ -24,7 +24,7 @@ build_time_vars = {'ABIFLAGS': '',
               '-F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/libffi.xcframework/macos-arm64_x86_64',
  'BUILDEXE': '.exe',
  'BUILDPYTHON': 'python.exe',
- 'BUILD_GNU_TYPE': 'aarch64-apple-darwin21.4.0',
+ 'BUILD_GNU_TYPE': 'aarch64-apple-darwin21.5.0',
  'BYTESTR_DEPS': '\\',
  'CC': 'clang',
  'CCSHARED': '',
@@ -564,7 +564,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_WRITEV': 1,
  'HAVE_ZLIB_COPY': 1,
  'HAVE__GETPTY': 0,
- 'HOST_GNU_TYPE': 'aarch64-apple-darwin21.4.0',
+ 'HOST_GNU_TYPE': 'aarch64-apple-darwin21.5.0',
  'INCLDIRSTOMAKE': '/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir/Frameworks/Python.framework/Versions/3.10/include '
                    '/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir/Frameworks/Python.framework/Versions/3.10/include '
                    '/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir/Frameworks/Python.framework/Versions/3.10/include/python3.10 '

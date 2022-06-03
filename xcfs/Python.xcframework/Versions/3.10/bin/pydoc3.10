@@ -1,4 +1,4 @@
-#!/usr/bin/env callisto_python
+#!/usr/bin/env callisto_python_wrapper
 
 import pydoc
 if __name__ == '__main__':
