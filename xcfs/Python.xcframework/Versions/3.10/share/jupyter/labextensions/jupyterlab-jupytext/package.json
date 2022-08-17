@@ -56,7 +56,7 @@
     "schemaDir": "schema",
     "outputDir": "../../jupytext/labextension",
     "_build": {
-      "load": "static/remoteEntry.e52aaaf3c49b9e545ee3.js",
+      "load": "static/remoteEntry.fb132cf060cae80c3e5a.js",
       "extension": "./extension"
     }
   },
