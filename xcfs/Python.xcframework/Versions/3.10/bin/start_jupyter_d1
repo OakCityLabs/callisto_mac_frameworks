@@ -7,6 +7,10 @@ import sys
 import uvicorn  # type: ignore
 from uvicorn.config import LOGGING_CONFIG  # type: ignore
 import nest_asyncio
+try:
+    nest_asyncio.apply()
+except Exception:
+    pass
 
 
 def get_args(args):
