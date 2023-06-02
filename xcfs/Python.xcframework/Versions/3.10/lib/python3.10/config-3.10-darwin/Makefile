@@ -264,8 +264,8 @@ PYTHON_FOR_REGEN?=python3
 UPDATE_FILE=$(PYTHON_FOR_REGEN) $(srcdir)/Tools/scripts/update_file.py
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
-BUILD_GNU_TYPE=	aarch64-apple-darwin22.4.0
-HOST_GNU_TYPE=	aarch64-apple-darwin22.4.0
+BUILD_GNU_TYPE=	aarch64-apple-darwin22.5.0
+HOST_GNU_TYPE=	aarch64-apple-darwin22.5.0
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
 TCLTK_INCLUDES=	
