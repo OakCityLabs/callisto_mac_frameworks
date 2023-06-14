@@ -81,7 +81,7 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -g -fwrapv -O3 -Wall
 BASECFLAGS=	 -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic
 BASECPPFLAGS=	
-CONFIGURE_CFLAGS=	-arch arm64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk  -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD
+CONFIGURE_CFLAGS=	-arch arm64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk  -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include/liblzma -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
@@ -90,8 +90,8 @@ CONFIGURE_CFLAGS_NODIST= -std=c99 -Wextra -Wno-unused-result -Wno-unused-paramet
 # Use it when a linker flag should _not_ be part of the distutils LDFLAGS
 # once Python is installed (bpo-35257)
 CONFIGURE_LDFLAGS_NODIST=
-CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk  -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD
-CONFIGURE_LDFLAGS=	-arch arm64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk  -L/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/lib -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/openssl.xcframework/macos-arm64_x86_64 -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/libffi.xcframework/macos-arm64_x86_64
+CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk  -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include/liblzma -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD
+CONFIGURE_LDFLAGS=	-arch arm64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk  -L/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/lib -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/openssl.xcframework/macos-arm64_x86_64 -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/libffi.xcframework/macos-arm64_x86_64 -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/liblzma.xcframework/macos-arm64_x86_64
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
 # values.
@@ -217,7 +217,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir' '--enable-universalsdk' '--enable-optimizations' '--with-universal-archs=universal2' '--with-openssl=/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64' '--enable-ipv6' 'with_system_ffi=yes' '--enable-framework=/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir/Frameworks' 'CC=clang' 'CFLAGS= -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD' 'LDFLAGS= -L/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/lib -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/openssl.xcframework/macos-arm64_x86_64 -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/libffi.xcframework/macos-arm64_x86_64' 'CPPFLAGS= -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD'
+CONFIG_ARGS=	 '--prefix=/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir' '--enable-universalsdk' '--enable-optimizations' '--with-universal-archs=universal2' '--with-openssl=/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64' '--enable-ipv6' 'with_system_ffi=yes' '--enable-framework=/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/mac_universal/install_dir/Frameworks' 'CC=clang' 'CFLAGS= -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include/liblzma -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD' 'LDFLAGS= -L/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/lib -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/openssl.xcframework/macos-arm64_x86_64 -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/libffi.xcframework/macos-arm64_x86_64 -F/Users/jayl/git/XCFrameworkBuilder/mac/xcframeworks/liblzma.xcframework/macos-arm64_x86_64' 'CPPFLAGS= -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include -I/Users/jayl/git/XCFrameworkBuilder/mac/build/Python/macos-arm64_x86_64/include/liblzma -DOPENSSL_NO_TLS1_METHOD -DOPENSSL_NO_TLS1_1_METHOD -DOPENSSL_NO_TLS1_2_METHOD'
 
 
 # Subdirectories with code
